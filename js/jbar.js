@@ -66,6 +66,7 @@
 		togglejBar: function () {
 
 			// toggle variables
+			var $body   = $("body")
 			var $this   = this.$elem
 			var $push   = $('.jbar-push')
 			var $toggle = $('.jbar-down-toggle')
@@ -98,6 +99,9 @@
 				$push.css({
 					'height' : $this.outerHeight(),
 				})
+				$body.css({
+					'marginTop' : $this.outerHeight()
+				});
 				setTimeout(function () {
 					$toggle.css({
 						'display' : 'block',
@@ -121,6 +125,10 @@
 					$toggle.css({
 						'marginTop' : - ($this.outerHeight() + 5)
 					})
+					
+					$body.animate({
+						'marginTop' : $this.outerHeight()
+					}, 400);
 				} else {
 					$this.add($push).css({
 						'marginTop' : - ($this.outerHeight())
@@ -128,6 +136,9 @@
 					$toggle.css({
 						'marginTop' : '0'
 					})
+					$body.animate({
+						'marginTop' : '0'
+					}, 400);
 				}
 				
 				// set data
