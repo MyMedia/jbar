@@ -31,12 +31,12 @@
 			this.$elem.before(
 				$('<div class="jbar-push"></div>' +
 					'<a href="#" class="jbar-down-toggle">' +
-					'<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="jbar-down-arrow" alt=""></a>')
+					'<i class="icon-chevron-up"></i></a>')
 			)
 			this.$elem.append(
 				$(
 					'<div class="jbar-wrap"></div><a href="#" class="jbar-up-toggle">' +
-					'<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="jbar-up-arrow" alt=""></a>'
+					'<i class="icon-chevron-down"></i></a>'
 				)
 			)
 			return this
